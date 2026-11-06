@@ -1,1 +1,6 @@
-1) For inner class we should use 'static' word because adding makes static makes that inner class independen.
+1) For inner class we should use 'static' word because adding makes static makes that inner class independent.
+
+2)  if(see_items.equals("Yes")){
+        myItems.displayItems(); 
+    }                           
+    -> in this code for the if block we cannot use see_items == "Yes" because in JAVA the == operator checks whether two strings point to exact memory location. So use see_items.equals("Yes"). It will work!!!
