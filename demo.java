@@ -4,6 +4,17 @@ public class demo{
         System.out.println("==== Grocery Mangement System ===");
         System.out.println();
         System.out.println("--- Welcome to XYZ Supermarket ---");
-        
+        System.out.println();
+        items myItems = new items();
+
     }
+    // Items class
+class items{
+    void displayItems(){
+        System.out.println("---- GROCERY ITEM LIST ---");
+        System.out.println("Product number\tProduct\tUnit\tPrice");
+        System.out.println("1\tRice\t1 kg\tRs.60");
+        System.out.println("1\tRice\t1 kg\tRs.60");
+    }
+}
 }
