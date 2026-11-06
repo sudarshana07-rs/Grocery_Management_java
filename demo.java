@@ -7,6 +7,7 @@ public class demo{
         System.out.println();
         System.out.println("--- Welcome to XYZ Supermarket ---");
         System.out.println();
+
         // To display the Grocery List
         items myItems = new items();
         System.out.println("Do you want to see the Grocery list (Yes/No): ");
@@ -15,10 +16,11 @@ public class demo{
             myItems.displayItems();
         }
         else{
-        while(!see_items.equals("Yes")){
         System.out.println("Check the Grocery List");
         }
-    }
+
+        // 
+        
 }
 }
     // Items class
