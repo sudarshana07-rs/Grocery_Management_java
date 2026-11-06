@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class demo{
     // Main method
     public static void main(String args[ ]){
+        // Intro Statements
         Scanner sc= new Scanner(System.in);
         System.out.println("==== Grocery Mangement System ===");
         System.out.println();
@@ -19,8 +20,54 @@ public class demo{
         System.out.println("Check the Grocery List");
         }
 
-        // 
-        
+        // While loop
+        while(true){
+        // Product input
+        System.out.println("Enter the Product: ");
+        int choice = sc.nextInt();
+
+        // Quantity input
+        System.out.println("Enter the Quantity: ");
+        int quantity = sc.nextInt();
+
+        // Creating total variable
+        int total=0;
+
+        // For Choice 6 and 7
+        if(choice==6){
+            System.out.println("TOTAL AMOUNT: Rs. "+total);
+        }
+        if(choice==7){
+            System.out.println("Thank You for Shoping!!!");
+            break;
+        }
+
+        // Switch Case
+            switch (choice) {
+                case 1:
+                    total= 60*quantity;
+                    System.out.println(quantity+ "kg of Rice added Successfully!!!");
+                    break;
+                case 2:                                                           
+                    total= 50*quantity;                                           
+                    System.out.println(quantity+ "kg of Sugar added Successfully!!!");
+                    break;    
+                case 3:                                                           
+                    total= 150*quantity;                                           
+                    System.out.println(quantity+ "kg of Dal added Successfully!!!");
+                    break;            
+                case 4:                                                                                                       
+                    total= 50*quantity;                                           
+                    System.out.println(quantity+ "kg of Wheat added Successfully!!!");
+                    break; 
+                case 5:                                                               
+                    total= 60*quantity;                                               
+                    System.out.println(quantity+ "litre of Milk added Successfully!!!");
+                    break;              
+                default:
+                    System.out.println("INVALID PRODUCT !!!");
+                }                                                              
+        }
 }
 }
     // Items class
@@ -34,5 +81,9 @@ class items{
         System.out.println("3\tDal\t1 kg\tRs.150");
         System.out.println("4\tWheat\t1 kg\tRs.45");
         System.out.println("5\tMilk\t1 litre\tRs.60");
+        System.out.println();
+        System.out.println("Press 6 for Total Bill !!!");
+        System.out.println();
+        System.out.println("Press 7 to EXIT");
     }
 }
