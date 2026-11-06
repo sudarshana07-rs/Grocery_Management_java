@@ -1,0 +1,1 @@
+1) For inner class we should use 'static' word because adding makes static makes that inner class independen.
