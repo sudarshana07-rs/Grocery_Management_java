@@ -14,11 +14,17 @@ public class demo{
         if(see_items.equals("Yes")){
             myItems.displayItems();
         }
+        else{
+        while(!see_items.equals("Yes")){
+        System.out.println("Check the Grocery List");
+        }
     }
+}
 }
     // Items class
 class items{
     void displayItems(){
+    System.out.println();
         System.out.println("---- GROCERY ITEM LIST ---");
         System.out.println("Sl.no\tProduct\tUnit\tPrice");
         System.out.println("1\tRice\t1 kg\tRs.60");
