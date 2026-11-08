@@ -7,7 +7,8 @@ public class demo{
     demo myDemo = new demo();
 
      // Creating total variable 
-     static int total=0;        
+     static int total=0;    
+     static String name;    
      
     // Main method
     public static void main(String args[ ]){
@@ -17,6 +18,10 @@ public class demo{
         System.out.println();
         System.out.println("--- Welcome to XYZ Supermarket ---");
         System.out.println();
+
+        // Customer Details
+        System.out.println("Enter your name: ");
+        name = sc.nextLine();
 
         // To display the Grocery List
         items myItems = new items();
@@ -102,8 +107,9 @@ class items{
 // Class: Billing
 class displayBilling{
     public void billing(){
+        
+        System.out.println("Name: "+demo.name);
         System.out.println(demo.total);
     } 
-
 }
 
