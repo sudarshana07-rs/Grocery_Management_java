@@ -22,6 +22,7 @@ public class demo{
         // Customer Details
         System.out.println("Enter your name: ");
         name = sc.nextLine();
+        System.out.println("------------------------------------");
 
         // To display the Grocery List
         items myItems = new items();
@@ -38,7 +39,7 @@ public class demo{
         while(true){
             
         // Product input
-        System.out.println("---------------------------");
+        System.out.println("--------------------------------");
         System.out.println("Enter the Product: ");
         int choice = sc.nextInt();
 
@@ -61,23 +62,23 @@ public class demo{
         switch (choice) {
                 case 1:
                     total += 60*quantity;
-                    System.out.println(quantity+ "kg of Rice added Successfully!!!");
+                    System.out.println(quantity+ " kg of Rice added Successfully!!!");
                     break;
                 case 2:                                                           
                     total += 50*quantity;                                           
-                    System.out.println(quantity+ "kg of Sugar added Successfully!!!");
+                    System.out.println(quantity+ " kg of Sugar added Successfully!!!");
                     break;    
                 case 3:                                                           
                     total += 150*quantity;                                           
-                    System.out.println(quantity+ "kg of Dal added Successfully!!!");
+                    System.out.println(quantity+ " kg of Dal added Successfully!!!");
                     break;            
                 case 4:                                                                                                       
                     total += 50*quantity;                                           
-                    System.out.println(quantity+ "kg of Wheat added Successfully!!!");
+                    System.out.println(quantity+ " kg of Wheat added Successfully!!!");
                     break; 
                 case 5:                                                               
                     total += 60*quantity;                                               
-                    System.out.println(quantity+ "litre of Milk added Successfully!!!");
+                    System.out.println(quantity+ " litre of Milk added Successfully!!!");
                     break;              
                 default:
                     System.out.println("INVALID PRODUCT !!!");
@@ -107,11 +108,18 @@ class items{
 // Class: Billing
 class billing{
     public void displayBilling(){
+
+        // Random class object creation
         Random rand = new Random();
+        // Gives random bill number from 1000 to 9999
         int billNumber = rand.nextInt(9000)+1000;
+
+        System.out.println("============================");
+        System.out.println("        XYZ SUPERMARKET       ");
         System.out.println("Name: "+demo.name);
         System.out.println("Bill Number: "+ billNumber);
-        System.out.println(demo.total);
+        System.out.println("--------------------------------");
+        System.out.println("TOTAL AMOUNT: Rs. "+ demo.total);
     } 
 }
 
