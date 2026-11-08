@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+// Class: Main
 public class demo{
     // Main method
     public static void main(String args[ ]){
@@ -73,7 +75,7 @@ public class demo{
         }
 }
 }
-    // Items class
+    // Class: Items 
 class items{
     void displayItems(){
     System.out.println();
@@ -90,3 +92,4 @@ class items{
         System.out.println();
     }
 }
+
