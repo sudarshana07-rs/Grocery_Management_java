@@ -23,27 +23,30 @@ public class demo{
         // While loop
         while(true){
         // Product input
+        System.out.println("---------------------------");
         System.out.println("Enter the Product: ");
         int choice = sc.nextInt();
 
-        // Quantity input
-        System.out.println("Enter the Quantity: ");
-        int quantity = sc.nextInt();
-
         // Creating total variable
-        int total=0;
+        int total=0;              
 
-        // For Choice 6 and 7
-        if(choice==6){
+        // For Choice 6 and 7                              
+        if(choice==6){            
+        
             System.out.println("TOTAL AMOUNT: Rs. "+total);
-        }
-        if(choice==7){
+            continue;
+        }                                                  
+        if(choice==7){                                     
             System.out.println("Thank You for Shoping!!!");
-            break;
-        }
+            break;                                         
+        }                                                  
+
+        // Quantity input                          
+        System.out.println("Enter the Quantity: ");
+        int quantity = sc.nextInt();   
 
         // Switch Case
-            switch (choice) {
+        switch (choice) {
                 case 1:
                     total= 60*quantity;
                     System.out.println(quantity+ "kg of Rice added Successfully!!!");
@@ -83,7 +86,7 @@ class items{
         System.out.println("5\tMilk\t1 litre\tRs.60");
         System.out.println();
         System.out.println("Press 6 for Total Bill !!!");
-        System.out.println();
         System.out.println("Press 7 to EXIT");
+        System.out.println();
     }
 }
