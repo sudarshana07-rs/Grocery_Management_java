@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Random;
 // Class: Main
 public class demo{
 
@@ -107,8 +107,8 @@ class items{
 // Class: Billing
 class displayBilling{
     public void billing(){
-        
         System.out.println("Name: "+demo.name);
+        // System.out.println("Bill Number: "+ random.);
         System.out.println(demo.total);
     } 
 }
