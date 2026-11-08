@@ -44,8 +44,8 @@ public class demo{
 
         // For Choice 6 and 7                              
         if(choice==6){            
-        
-            System.out.println("TOTAL AMOUNT: Rs. "+total);
+            billing myBilling = new billing();
+            myBilling.displayBilling();
             continue;
         }                                                  
         if(choice==7){                                     
@@ -105,10 +105,12 @@ class items{
 }
 
 // Class: Billing
-class displayBilling{
-    public void billing(){
+class billing{
+    public void displayBilling(){
+        Random rand = new Random();
+        int billNumber = rand.nextInt(9000)+1000;
         System.out.println("Name: "+demo.name);
-        // System.out.println("Bill Number: "+ random.);
+        System.out.println("Bill Number: "+ billNumber);
         System.out.println(demo.total);
     } 
 }
