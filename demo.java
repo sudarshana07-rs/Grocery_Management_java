@@ -2,6 +2,13 @@ import java.util.Scanner;
 
 // Class: Main
 public class demo{
+
+    // Creating a object for demo class
+    demo myDemo = new demo();
+
+     // Creating total variable 
+     static int total=0;        
+     
     // Main method
     public static void main(String args[ ]){
         // Intro Statements
@@ -20,17 +27,15 @@ public class demo{
         }
         else{
         System.out.println("Check the Grocery List");
-        }
+        }      
 
         // While loop
         while(true){
+            
         // Product input
         System.out.println("---------------------------");
         System.out.println("Enter the Product: ");
         int choice = sc.nextInt();
-
-        // Creating total variable
-        int total=0;              
 
         // For Choice 6 and 7                              
         if(choice==6){            
@@ -50,23 +55,23 @@ public class demo{
         // Switch Case
         switch (choice) {
                 case 1:
-                    total= 60*quantity;
+                    total += 60*quantity;
                     System.out.println(quantity+ "kg of Rice added Successfully!!!");
                     break;
                 case 2:                                                           
-                    total= 50*quantity;                                           
+                    total += 50*quantity;                                           
                     System.out.println(quantity+ "kg of Sugar added Successfully!!!");
                     break;    
                 case 3:                                                           
-                    total= 150*quantity;                                           
+                    total += 150*quantity;                                           
                     System.out.println(quantity+ "kg of Dal added Successfully!!!");
                     break;            
                 case 4:                                                                                                       
-                    total= 50*quantity;                                           
+                    total += 50*quantity;                                           
                     System.out.println(quantity+ "kg of Wheat added Successfully!!!");
                     break; 
                 case 5:                                                               
-                    total= 60*quantity;                                               
+                    total += 60*quantity;                                               
                     System.out.println(quantity+ "litre of Milk added Successfully!!!");
                     break;              
                 default:
@@ -75,6 +80,7 @@ public class demo{
         }
 }
 }
+
     // Class: Items 
 class items{
     void displayItems(){
@@ -91,5 +97,13 @@ class items{
         System.out.println("Press 7 to EXIT");
         System.out.println();
     }
+}
+
+// Class: Billing
+class displayBilling{
+    public void billing(){
+        System.out.println(demo.total);
+    } 
+
 }
 
