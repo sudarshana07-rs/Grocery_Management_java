@@ -131,7 +131,9 @@ class billing{
 
 // Class : REMOVE
 class remove_item{
-    void removeItems(Scanner sc){                                     
+    void removeItems(Scanner sc){          
+        int removeChoice;
+        do{                           
                      System.out.println();                                        
                      System.out.println("---- REMOVE ITEM ---");               
                      System.out.println("Sl.no\tProduct\tUnit\tPrice");       
@@ -141,13 +143,13 @@ class remove_item{
                      System.out.println("4\tWheat\t1 kg\tRs.45");             
                      System.out.println("5\tMilk\t1 litre\tRs.60");           
                      System.out.println();                                    
-                     
+
             System.out.println("Enter the product number to remove");
-            int removeChoice = sc.nextInt();         
+            removeChoice = sc.nextInt();         
                     
             System.out.println("Enter the quantity to remove: ");
             int removeQty = sc.nextInt();
-
+        if (removeChoice >= 1 && removeChoice<=5){
         switch(removeChoice){
             case 1: 
                 demo.total -= 60*removeQty;                                                         
@@ -168,14 +170,13 @@ class remove_item{
             case 5:                                                                
                 demo.total -= 60*removeQty;                                                 
                 System.out.println(removeQty+" kg of Sugar removed Successfully!!!");
-                break;     
-            case 6:
-                System.out.println("Exiting Remove Items");
-                break;
+                break;   
             default:
                 System.out.println("INVALID ITEM TO REMOVE !!!"); 
 
         }
+    }
+        } while (removeChoice != 6);
     }
 }
 
