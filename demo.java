@@ -44,12 +44,12 @@ public class demo{
         int choice = sc.nextInt();
 
         // For Choice 6 and 7                              
-        if(choice==6){            
+        if(choice==7){            
             billing myBilling = new billing();
             myBilling.displayBilling();
             continue;
         }                                                  
-        if(choice==7){                                     
+        if(choice==8){                                     
             System.out.println("Thank You for Shoping!!!");
             break;                                         
         }                                                  
@@ -82,12 +82,19 @@ public class demo{
                     break;              
                 default:
                     System.out.println("INVALID PRODUCT !!!");
-                }                                                              
+                }                           
+                // Remove Product                                                                                 
+              System.out.println("Do you want to remove item (Yes or No): ");
+            String remove= sc.nextLine();                                  
+           if (remove.equals("Yes")){                                     
+                                               
+           }
         }
-}
+    }
 }
 
-    // Class: Items 
+
+    // Class: Items                     
 class items{
     void displayItems(){
     System.out.println();
@@ -99,8 +106,9 @@ class items{
         System.out.println("4\tWheat\t1 kg\tRs.45");
         System.out.println("5\tMilk\t1 litre\tRs.60");
         System.out.println();
-        System.out.println("Press 6 for Total Bill !!!");
-        System.out.println("Press 7 to EXIT");
+        System.out.println("Press 6 to Remove");
+        System.out.println("Press 7 for Total Bill !!!");
+        System.out.println("Press 8 to EXIT");
         System.out.println();
     }
 }
