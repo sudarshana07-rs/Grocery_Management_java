@@ -133,7 +133,8 @@ class billing{
 class remove_item{
     void removeItems(Scanner sc){      
         System.out.println("Do you want to remove item (Yes or No): ");
-        String remove= sc.nextLine();                                  
+        String remove= sc.nextLine();      
+        System.out.println();                            
             if (remove.equals("Yes")){                                     
                      System.out.println();                                        
                      System.out.println("---- REMOVE ITEM ---");               
@@ -144,7 +145,7 @@ class remove_item{
                      System.out.println("4\tWheat\t1 kg\tRs.45");             
                      System.out.println("5\tMilk\t1 litre\tRs.60");           
                      System.out.println();                                    
-                                                                              
+            sc.nextLine();                    
             System.out.println("Enter the product number to remove");
             int removeChoice = sc.nextInt();         
                     
