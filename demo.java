@@ -131,11 +131,7 @@ class billing{
 
 // Class : REMOVE
 class remove_item{
-    void removeItems(Scanner sc){      
-        System.out.println("Do you want to remove item (Yes or No): ");
-        String remove= sc.nextLine();      
-        System.out.println();                            
-            if (remove.equals("Yes")){                                     
+    void removeItems(Scanner sc){                                     
                      System.out.println();                                        
                      System.out.println("---- REMOVE ITEM ---");               
                      System.out.println("Sl.no\tProduct\tUnit\tPrice");       
@@ -145,7 +141,7 @@ class remove_item{
                      System.out.println("4\tWheat\t1 kg\tRs.45");             
                      System.out.println("5\tMilk\t1 litre\tRs.60");           
                      System.out.println();                                    
-            sc.nextLine();                    
+                     
             System.out.println("Enter the product number to remove");
             int removeChoice = sc.nextInt();         
                     
@@ -155,51 +151,42 @@ class remove_item{
         switch(removeChoice){
             case 1: 
                 demo.total -= 60*removeQty;                                                         
-                System.out.println(removeQty+ " kg of Rice added Successfully!!!");
+                System.out.println(removeQty+ " kg of Rice removed Successfully!!!");
                 break;
             case 2:                                                                 
                 demo.total -= 50*removeQty;                                              
-                System.out.println(removeQty+" kg of Sugar added Successfully!!!");
+                System.out.println(removeQty+" kg of Sugar removed Successfully!!!");
                 break;
             case 3:                                                                
                 demo.total -= 150*removeQty;                                             
-                System.out.println(removeQty+" kg of Sugar added Successfully!!!");
+                System.out.println(removeQty+" kg of Sugar removed Successfully!!!");
                 break;           
             case 4:                                                                   
                 demo.total -= 50*removeQty;                                                 
-                System.out.println(removeQty+" kg of Sugar added Successfully!!!");
+                System.out.println(removeQty+" kg of Sugar removed Successfully!!!");
                 break;     
             case 5:                                                                
                 demo.total -= 60*removeQty;                                                 
-                System.out.println(removeQty+" kg of Sugar added Successfully!!!");
+                System.out.println(removeQty+" kg of Sugar removed Successfully!!!");
                 break;     
+            case 6:
+                System.out.println("Exiting Remove Items");
+                break;
             default:
                 System.out.println("INVALID ITEM TO REMOVE !!!"); 
 
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
