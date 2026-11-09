@@ -147,9 +147,9 @@ class remove_item{
             System.out.println("Enter the product number to remove");
             removeChoice = sc.nextInt();         
                     
-            System.out.println("Enter the quantity to remove: ");
-            int removeQty = sc.nextInt();
         if (removeChoice >= 1 && removeChoice<=5){
+            System.out.println("Enter the quantity to remove: ");
+            int removeQty = sc.nextInt();                        
         switch(removeChoice){
             case 1: 
                 demo.total -= 60*removeQty;                                                         
