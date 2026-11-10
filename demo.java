@@ -2,8 +2,6 @@ import java.util.Scanner;
 import java.util.Random;
 // Class: Main
 public class demo{
-    // Creating a object for demo class
-    demo myDemo = new demo();
 
      // Creating total variable 
      static int total=0;    
@@ -39,7 +37,7 @@ public class demo{
             
         // Product input
         System.out.println("--------------------------------");
-        System.out.println("Enter the Product number: ");
+        System.out.println("Enter the Product number (or press 6 to Remove, 7 for Bill, 8 to Exit: ");
         int choice = sc.nextInt();
         
         // For choice 6: Remove Item
@@ -145,7 +143,11 @@ class remove_item{
                      System.out.println();                                    
 
             System.out.println("Enter the product number to remove");
-            removeChoice = sc.nextInt();         
+            removeChoice = sc.nextInt();       
+            
+        if(removeChoice == 0){
+            break;
+        }
                     
         if (removeChoice >= 1 && removeChoice<=5){
             System.out.println("Enter the quantity to remove: ");
@@ -176,7 +178,7 @@ class remove_item{
 
         }
     }
-        } while (removeChoice != 6);
+        } while (removeChoice != 0);
     }
 }
 
